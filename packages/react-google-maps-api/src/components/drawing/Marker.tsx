@@ -228,7 +228,7 @@ export class Marker extends React.PureComponent<MarkerProps> {
 
   render(): React.ReactNode {
     let children: ReactNode | null = null
-    if (this.props.children) {
+    if (this.props.children && this.marker) {
       children = React.Children.map(this.props.children, child => {
         if (!React.isValidElement<HasMarkerAnchor>(child)) {
           return child
